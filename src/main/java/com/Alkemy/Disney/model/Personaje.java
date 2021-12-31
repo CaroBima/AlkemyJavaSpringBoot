@@ -22,7 +22,7 @@ import lombok.Setter;
 public class Personaje {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idPersonaje;
+    int idPersonaje;
     
     @Basic
     private String imagenPersonaje;
