@@ -4,9 +4,10 @@ import java.util.List;
 import com.Alkemy.Disney.model.Personaje;
 import com.Alkemy.Disney.repository.PersonajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
-
+@Service
 public class PersonajeService implements IPersonajeService{
 
     @Autowired
