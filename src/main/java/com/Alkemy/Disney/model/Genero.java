@@ -1,12 +1,9 @@
-/*
-Género: deberá tener,
 
-○ Nombre.
-○ Imagen.
-○ Películas o series asociadas.
-*/
 package com.Alkemy.Disney.model;
 
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,8 +13,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Genero {
+    
+    @Id
     public int idGenero;
+    
+    @Basic
     public String nombre;
     public String imagenGenero;
 }

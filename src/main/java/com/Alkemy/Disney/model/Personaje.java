@@ -1,6 +1,14 @@
 
 package com.Alkemy.Disney.model;
 
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,13 +18,20 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Personaje {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int idPersonaje;
+    
+    @Basic
     private String imagenPersonaje;
     private String nombre;
     private String edad;
     private double peso;
     private String historia;
-    private int idPeliOSerie; //Cambiarlo cuando este solucionado el problema con jpa
-    //private PeliOSerie idPeliOSerie;
+    
+    @JoinColumn
+    @ManyToOne (cascade = CascadeType.MERGE)
+    private PeliOSerie idPeliOSerie;
 }
