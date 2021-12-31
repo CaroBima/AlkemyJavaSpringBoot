@@ -2,12 +2,17 @@
 package com.Alkemy.Disney.model;
 
 import java.util.Date;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class PeliOSerie {
-    private double idPeliOSerie;
+    private int idPeliOSerie;
     
     private String imagen;
     private String titulo;

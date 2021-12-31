@@ -7,9 +7,17 @@ Género: deberá tener,
 */
 package com.Alkemy.Disney.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Genero {
-    public double idGenero;
+    public int idGenero;
     public String nombre;
     public String imagenGenero;
 }
