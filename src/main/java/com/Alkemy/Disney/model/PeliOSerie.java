@@ -2,7 +2,6 @@
 package com.Alkemy.Disney.model;
 
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -10,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.AllArgsConstructor;
@@ -37,6 +36,6 @@ public class PeliOSerie {
     private Date fechaCreacion;
     
     @JoinColumn
-    @OneToMany (cascade = CascadeType.MERGE)
-    private List<Genero> idGenero;
+    @ManyToOne (cascade = CascadeType.MERGE)
+    private Genero idGenero;
 }
