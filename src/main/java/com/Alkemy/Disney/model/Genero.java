@@ -25,4 +25,5 @@ public class Genero {
     @Basic
     public String nombre;
     public String imagenGenero;
+
 }

@@ -24,7 +24,7 @@ public class Personaje {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int idPersonaje;
     
-    @Basic
+   @Basic
     private String imagenPersonaje;
     private String nombre;
     private String edad;
