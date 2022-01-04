@@ -25,16 +25,26 @@ public class PersonajeController {
         personajeService.crearPersonaje(personaje);
     }
     
+     @DeleteMapping ("/delete/{id}")
+    public void borrarPersonaje(@PathVariable int idpersonaje){
+        personajeService.borrarPersonaje(idpersonaje);
+    }
+    
     
     @GetMapping("/characters")
     @ResponseBody  
     public List<Personaje> verPersonajes(){
         return personajeService.verPersonajes();
+        
     }
     
-    @DeleteMapping ("/delete/{id}")
-    public void borrarPersonaje(@PathVariable int idpersonaje){
-        personajeService.borrarPersonaje(idpersonaje);
+    @GetMapping(" /characters?age=edad")
+    @ResponseBody  
+    public List<Personaje> verPersonajesxedad(@PathVariable String edad){
+        return personajeService.buscarPersonajeXedad(edad);
+        
     }
     
+    
+ 
 }

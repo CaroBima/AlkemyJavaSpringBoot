@@ -3,6 +3,7 @@ package com.Alkemy.Disney.service;
 import java.util.List;
 import com.Alkemy.Disney.model.Personaje;
 import com.Alkemy.Disney.repository.PersonajeRepository;
+import static java.lang.Integer.parseInt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +34,16 @@ public class PersonajeService implements IPersonajeService{
     public Personaje buscarPersonaje(int idPersonaje){
        return personajeRepo.findById(idPersonaje).orElse(null);//si no encuentra la persona, retorna null
     }
-    
-}
+
+    @Override
+    public List<Personaje> buscarPersonajeXedad(String edad) {
+      return personajeRepo.findIsLikeEdadOrderByEdad(edad);
+    }
+
+    @Override
+    public List<Personaje> buscarPersonajeXnombre(String nombre) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   
+}     
