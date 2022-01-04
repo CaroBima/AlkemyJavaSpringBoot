@@ -42,7 +42,7 @@ public class PersonajeService implements IPersonajeService{
 
     @Override
     public List<Personaje> buscarPersonajeXnombre(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return personajeRepo.findIsLikeNombreOrderByNombre(nombre);
     }
 
    
