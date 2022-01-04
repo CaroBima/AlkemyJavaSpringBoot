@@ -10,4 +10,6 @@ public interface IPersonajeService {
     public void crearPersonaje(Personaje personaje);
     public void borrarPersonaje(int idPersonaje);
     public Personaje buscarPersonaje(int idPersonaje);
+    public List<Personaje> buscarPersonajeXedad(String edad);
+    public List<Personaje> buscarPersonajeXnombre(String nombre);
 }
