@@ -24,8 +24,14 @@ public class GeneroService implements IGeneroService {
     }
 
     @Override
-    public void borrarGenero(int idGenero) {
-       generoRepo.deleteById(idGenero);
+    public boolean borrarGenero(int idGenero) {
+        try{
+            generoRepo.deleteById(idGenero);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+        
     }
 
     @Override

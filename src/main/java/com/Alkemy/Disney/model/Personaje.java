@@ -1,14 +1,19 @@
 
 package com.Alkemy.Disney.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,7 +36,7 @@ public class Personaje {
     private double peso;
     private String historia;
     
-    @JoinColumn
-    @ManyToOne (cascade = CascadeType.MERGE)
-    private PeliOSerie idPeliOSerie;
+    @JsonBackReference
+    @ManyToMany(fetch=FetchType.LAZY,  mappedBy = "idPersonaje", cascade = CascadeType.ALL)
+    private List<PeliOSerie> idPeliOSerie;
 }
