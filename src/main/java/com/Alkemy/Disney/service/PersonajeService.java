@@ -1,9 +1,9 @@
 package com.Alkemy.Disney.service;
 
+import com.Alkemy.Disney.model.PeliOSerie;
 import java.util.List;
 import com.Alkemy.Disney.model.Personaje;
 import com.Alkemy.Disney.repository.PersonajeRepository;
-import static java.lang.Integer.parseInt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class PersonajeService implements IPersonajeService{
     public PersonajeRepository personajeRepo;
     
     @Override
-    public List<Personaje> verPersonajes() {
+    public Iterable<Personaje> verPersonajes() {
        return personajeRepo.findAll();
     }
 
@@ -26,8 +26,14 @@ public class PersonajeService implements IPersonajeService{
 
     
     @Override
-    public void borrarPersonaje(int idPersonaje) {
-        personajeRepo.deleteById(idPersonaje);
+    public boolean borrarPersonaje(int idPersonaje) {
+       try{
+            personajeRepo.deleteById(idPersonaje);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+        
     }
 
     @Override
@@ -43,6 +49,11 @@ public class PersonajeService implements IPersonajeService{
     @Override
     public List<Personaje> buscarPersonajeXnombre(String nombre) {
         return personajeRepo.findIsLikeNombreOrderByNombre(nombre);
+    }
+
+    @Override
+    public List<Personaje> buscarPersonajeXId(PeliOSerie id) {
+        return personajeRepo.findIsLikeidPeliOSerieOrderByidPeliOSerie(id);
     }
 
    

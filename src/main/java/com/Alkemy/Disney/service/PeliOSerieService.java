@@ -22,8 +22,14 @@ public class PeliOSerieService implements IPeliOSerieService{
     }
 
     @Override
-    public void borrarPeliOSerie(int idPeliOSerie) {
-        peliOSerieRepo.deleteById(idPeliOSerie);
+    public boolean borrarPeliOSerie(int idPeliOSerie) {
+         try{
+            peliOSerieRepo.deleteById(idPeliOSerie);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+        
     }
 
     @Override

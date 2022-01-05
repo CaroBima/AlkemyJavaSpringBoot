@@ -1,6 +1,7 @@
 
 package com.Alkemy.Disney.controller;
 
+import com.Alkemy.Disney.model.PeliOSerie;
 import com.Alkemy.Disney.model.Personaje;
 import com.Alkemy.Disney.service.IPersonajeService;
 import java.util.List;
@@ -30,17 +31,22 @@ public class PersonajeController {
     
      @DeleteMapping ("/delete/{id}")
     public void borrarPersonaje(@PathVariable int idpersonaje){
+        
         personajeService.borrarPersonaje(idpersonaje);
     }
     
-    
-   /* @GetMapping("/characters")
+    /*
+   @GetMapping()
     @ResponseBody  
-    public List<Personaje> verPersonajes(){
+    public List<Personaje> detallePersonajes(){
         return personajeService.verPersonajes();
         
     }
 */
+      @GetMapping()
+    public Iterable<Personaje> verDetalle(){
+        return personajeService.verPersonajes();
+    }
     
     @GetMapping(params="age")  
     @ResponseBody  
@@ -52,8 +58,11 @@ public class PersonajeController {
     @GetMapping(params="name")  
     public List<Personaje> verPersonajesxnombre(@RequestParam("name") String name){
         return personajeService.buscarPersonajeXnombre(name);
-        
     }
     
+    @GetMapping(params="movies")  
+    public List<Personaje> buscarPersonajeXIdPeliOSerie(@RequestParam("movies") PeliOSerie idMovie){
+        return personajeService.buscarPersonajeXId(idMovie);
+    }
  
 }
