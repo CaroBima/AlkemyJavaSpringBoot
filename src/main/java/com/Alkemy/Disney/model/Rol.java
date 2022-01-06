@@ -1,4 +1,7 @@
-
+/*Rol del usuario:
+Administrador
+Usuario
+*/
 package com.Alkemy.Disney.model;
 
 import java.io.Serializable;
@@ -18,17 +21,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="generos")
-public class Genero implements Serializable{
-    
+@Table(name="roles")
+public class Rol implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long idGenero;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long idRol;
     
-    @Column(name="nombre", unique=true, length=50)
-    public String nombre;
-    
-    @Column(name="imagenGenero", length=450)
-    public String imagenGenero;
-
+    @Column(unique=true, length=20)
+    private String nombre;
 }

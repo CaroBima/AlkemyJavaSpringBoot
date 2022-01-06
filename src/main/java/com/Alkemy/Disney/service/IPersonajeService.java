@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IPersonajeService {
     
-    public Iterable<Personaje> verPersonajes();
+    public List<Personaje> verPersonajes();
     public void crearPersonaje(Personaje personaje);
     public boolean borrarPersonaje(int idPersonaje);
     public Personaje buscarPersonaje(int idPersonaje);

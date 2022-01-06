@@ -15,7 +15,7 @@ public class PersonajeService implements IPersonajeService{
     public PersonajeRepository personajeRepo;
     
     @Override
-    public Iterable<Personaje> verPersonajes() {
+    public List<Personaje> verPersonajes() {
        return personajeRepo.findAll();
     }
 

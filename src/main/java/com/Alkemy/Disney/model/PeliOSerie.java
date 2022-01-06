@@ -1,14 +1,13 @@
 
 package com.Alkemy.Disney.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.AllArgsConstructor;
@@ -28,16 +28,22 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class PeliOSerie {
+@Table(name="pelisoseries")
+public class PeliOSerie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idPeliOSerie;
     
-    @Basic
+    @Column (name="imagen", length=450)
     private String imagen;
+    
+    @Column (name="titulo", length=80)
     private String titulo;
+    
+    @Column (name="calificacion")
     private int calificacion;
     
+    @Column(name="fechaCreacion")
     @Temporal(TemporalType.DATE)
     private Date fechaCreacion;
     

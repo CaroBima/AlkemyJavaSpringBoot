@@ -11,8 +11,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PersonajeRepository extends JpaRepository <Personaje, Integer> {
     
-    @Query(value = "select imagen, nombre from personaje;" ,nativeQuery = true)
-    public Iterable<Object[]> verDetalle();
+    @Query(value = "select imagen_personaje, nombre from personaje;" ,nativeQuery = true)
+    public List<Personaje> verDetalle();
     
     List<Personaje> findIsLikeEdadOrderByEdad(String edad);
     
