@@ -35,16 +35,9 @@ public class PersonajeController {
         personajeService.borrarPersonaje(idpersonaje);
     }
     
-    /*
-   @GetMapping()
-    @ResponseBody  
-    public List<Personaje> detallePersonajes(){
-        return personajeService.verPersonajes();
-        
-    }
-*/
-      @GetMapping()
-    public Iterable<Personaje> verDetalle(){
+ 
+    @GetMapping()
+    public List<Personaje> verDetalle(){
         return personajeService.verPersonajes();
     }
     
