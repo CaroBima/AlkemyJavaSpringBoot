@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "b327110f-e997-4fd1-8974-517000d80cdc",
+		"name": "Alkemy Disney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/new/genero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idGenero\" : \"1\",\r\n    \"nombre\" : \"Fantasía\",\r\n    \"imagenGenero\" : \"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/new/genero",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new",
+						"genero"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/new/genero2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idGenero\" : \"2\",\r\n    \"nombre\" : \"Acción\",\r\n    \"imagenGenero\" : \"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/07/mejores-peliculas-disney-plus-2021-2423771.jpg?itok=9EW0-47d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/new/genero",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new",
+						"genero"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/new/PeliOSerie2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrR2wjVfAucVBIaE048zDXv2G3cHCmxetx27P8HHsI7wr3yoJ\",\r\n    \"titulo\" : \"Avengers: Endgame\",\r\n    \"calificacion\" : \"5\",\r\n    \"fechaCreacion\" : \"2019-04-26\",\r\n    \"idGenero\" : {\r\n        \"idGenero\": \"2\",\r\n        \"nombre\": \"Acción\",\r\n        \"imagenGenero\" :\"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\" \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/new/PeliOSerie",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new",
+						"PeliOSerie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/new/PeliOSerie (Shrek 2)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrR2wjVfAucVBIaE048zDXv2G3cHCmxetx27P8HHsI7wr3yoJ\",\r\n    \"titulo\" : \"Shrek 2\",\r\n    \"calificacion\" : \"4\",\r\n    \"fechaCreacion\" : \"2014-05-19\",\r\n    \"idGenero\" :  {\r\n        \"idGenero\": \"1\",\r\n        \"nombre\": \"Fantasía\",\r\n        \"imagenGenero\" :\"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\" \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/new/PeliOSerie",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new",
+						"PeliOSerie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/new/PeliOSerie (Shrek 3)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrR2wjVfAucVBIaE048zDXv2G3cHCmxetx27P8HHsI7wr3yoJ\",\r\n    \"titulo\" : \"Shrek 3\",\r\n    \"calificacion\" : \"2\",\r\n    \"fechaCreacion\" : \"2015-05-11\",\r\n    \"idGenero\" :  {\r\n        \"idGenero\": \"1\",\r\n        \"nombre\": \"Fantasía\",\r\n        \"imagenGenero\" :\"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\" \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/new/PeliOSerie",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new",
+						"PeliOSerie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new/personaje",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPersonaje\" : \"1\",\r\n    \"imagenPersonaje\" : \"https://commons.wikimedia.org/wiki/File:Iron_Man_Repulsors_(14041559344).jpg\",\r\n    \"nombre\" : \"Tony Stark\",\r\n    \"edad\" : \"45\",\r\n    \"peso\" : \"102\",\r\n    \"historia\" : \"Multimillonario dedicado a la investigación de innovaciones tecnológicas. Se conviernte en superhéroe\",\r\n    \"idPeliOSerie\" : {\r\n    \"idPeliOSerie\" : \"1\",\r\n    \"imagen\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrR2wjVfAucVBIaE048zDXv2G3cHCmxetx27P8HHsI7wr3yoJ\",\r\n    \"titulo\" : \"Capitana Marvel\",\r\n    \"calificacion\" : \"5\",\r\n    \"fechaCreacion\" : \"2019-03-19\",\r\n    \"idGenero\" :  {\r\n        \"idGenero\": \"2\",\r\n        \"nombre\": \"Acción\",\r\n        \"imagenGenero\" :\"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\" \r\n        }\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/characters/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new/personaje 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPersonaje\" : \"2\",\r\n    \"imagenPersonaje\" : \"https://i1.wp.com/www.sopitas.com/wp-content/uploads/2021/12/30-datos-curiosos-harry-potter.jpg\",\r\n    \"nombre\" : \"Shrek\",\r\n    \"edad\" : \"35\",\r\n    \"peso\" : \"130\",\r\n    \"historia\" : \"Un ogro verde\",\r\n    \"idPeliOSerie\" : {\r\n    \"idPeliOSerie\" : \"1\",\r\n    \"imagen\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrR2wjVfAucVBIaE048zDXv2G3cHCmxetx27P8HHsI7wr3yoJ\",\r\n    \"titulo\" : \"Shrek\",\r\n    \"calificacion\" : \"5\",\r\n    \"fechaCreacion\" : \"2019-03-19\",\r\n    \"idGenero\" :  {\r\n        \"idGenero\": \"2\",\r\n        \"nombre\": \"Acción\",\r\n        \"imagenGenero\" :\"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\" \r\n        }\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/characters/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/characters?age",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/characters?age=45",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "45"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/characters?name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/characters?name=Tony Stark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Tony Stark"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/characters?movies=5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/characters?movies=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters"
+					],
+					"query": [
+						{
+							"key": "movies",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/characters/ (detalle de todos)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/characters/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

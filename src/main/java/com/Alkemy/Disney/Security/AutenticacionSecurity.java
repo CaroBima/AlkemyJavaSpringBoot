@@ -20,11 +20,13 @@ public class AutenticacionSecurity extends AuthorizationServerConfigurerAdapter{
     
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
     
     @Autowired
     @Qualifier("authenticationManager")
-    private AuthenticationManager authenticationManager;
+    public AuthenticationManager authenticationManager;
     
+ 
     
      @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception{
@@ -45,10 +47,9 @@ public class AutenticacionSecurity extends AuthorizationServerConfigurerAdapter{
     }
     
    
-    
+   
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception{
-        
         endpoints.authenticationManager(authenticationManager)
                 .accessTokenConverter(accessTokenConverter());
         
