@@ -4,7 +4,6 @@ import com.Alkemy.Disney.model.PeliOSerie;
 import com.Alkemy.Disney.repository.PeliOSerieRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -36,20 +35,5 @@ public class PeliOSerieService implements IPeliOSerieService{
     @Override
     public PeliOSerie buscarPeliOSerie(int idPeliOSerie) {
         return peliOSerieRepo.findById(idPeliOSerie).orElse(null);
-    }
-   
- 
-
-    @Override
-    @Query(value = "SELECT imagen, titulo, fecha_creacion FROM PeliOSerie;", nativeQuery = true)
-    public List<PeliOSerie> buscarPelioSeriexMovies() {
-        return peliOSerieRepo.findAll();
-        //return peliOSerieRepo.findByImagenAndTituloAndFechacreacion();
-    }
-    
-    @Override
-    @Query("select m.nombre, m.titulo, m.fechacreacion from pelioserie m" )
-    public List<PeliOSerie> getNombreAndTituloAndFechacreacion(){
-     return peliOSerieRepo.findAll();
     }
 }

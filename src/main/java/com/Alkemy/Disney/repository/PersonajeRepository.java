@@ -14,7 +14,7 @@ public interface PersonajeRepository extends JpaRepository <Personaje, Integer> 
     @Query(value = "select imagen_personaje, nombre from personaje;" ,nativeQuery = true)
     public List<Personaje> verDetalle();
     
-    List<Personaje> findIsLikeEdadOrderByEdad(String edad);
+    List<Personaje> findIsLikeEdadOrderByEdad(int edad);
     
     List<Personaje> findIsLikeNombreOrderByNombre(String nombre);
      
