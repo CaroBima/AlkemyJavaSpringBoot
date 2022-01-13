@@ -42,7 +42,7 @@ public class PersonajeService implements IPersonajeService{
     }
 
     @Override
-    public List<Personaje> buscarPersonajeXedad(String edad) {
+    public List<Personaje> buscarPersonajeXedad(int edad) {
       return personajeRepo.findIsLikeEdadOrderByEdad(edad);
     }
 

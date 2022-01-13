@@ -3,7 +3,6 @@ package com.Alkemy.Disney.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;

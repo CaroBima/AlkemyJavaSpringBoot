@@ -3,7 +3,6 @@ package com.Alkemy.Disney.service;
 
 import com.Alkemy.Disney.model.PeliOSerie;
 import java.util.List;
-import org.springframework.data.jpa.repository.Query;
 
 
 public interface IPeliOSerieService {
@@ -11,6 +10,5 @@ public interface IPeliOSerieService {
     public void agregarPeliOSerie (PeliOSerie peliOSerie);
     public boolean borrarPeliOSerie (int idPeliOSerie);
     public PeliOSerie buscarPeliOSerie(int idPeliOSerie);
-    public List<PeliOSerie> buscarPelioSeriexMovies();
-    public List<PeliOSerie> getNombreAndTituloAndFechacreacion();
+   
 }

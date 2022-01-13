@@ -11,7 +11,7 @@ public interface IPersonajeService {
     public void crearPersonaje(Personaje personaje);
     public boolean borrarPersonaje(int idPersonaje);
     public Personaje buscarPersonaje(int idPersonaje);
-    public List<Personaje> buscarPersonajeXedad(String edad);
+    public List<Personaje> buscarPersonajeXedad(int edad);
     public List<Personaje> buscarPersonajeXnombre(String nombre);
     public List<Personaje> buscarPersonajeXId(PeliOSerie id);
 }
