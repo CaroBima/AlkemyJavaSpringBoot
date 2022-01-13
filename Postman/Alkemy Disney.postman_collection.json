@@ -152,7 +152,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idPersonaje\" : \"1\",\r\n    \"imagenPersonaje\" : \"https://commons.wikimedia.org/wiki/File:Iron_Man_Repulsors_(14041559344).jpg\",\r\n    \"nombre\" : \"Tony Stark\",\r\n    \"edad\" : \"45\",\r\n    \"peso\" : \"102\",\r\n    \"historia\" : \"Multimillonario dedicado a la investigación de innovaciones tecnológicas. Se conviernte en superhéroe\",\r\n    \"idPeliOSerie\" : {\r\n    \"idPeliOSerie\" : \"1\",\r\n    \"imagen\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrR2wjVfAucVBIaE048zDXv2G3cHCmxetx27P8HHsI7wr3yoJ\",\r\n    \"titulo\" : \"Capitana Marvel\",\r\n    \"calificacion\" : \"5\",\r\n    \"fechaCreacion\" : \"2019-03-19\",\r\n    \"idGenero\" :  {\r\n        \"idGenero\": \"2\",\r\n        \"nombre\": \"Acción\",\r\n        \"imagenGenero\" :\"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\" \r\n        }\r\n}\r\n}",
+					"raw": "{\r\n    \"idPersonaje\" : \"1\",\r\n    \"imagenPersonaje\" : \"https://commons.wikimedia.org/wiki/File:Iron_Man_Repulsors_(14041559344).jpg\",\r\n    \"nombre\" : \"Tony Stark\",\r\n    \"edad\" : \"45\",\r\n    \"peso\" : \"102\",\r\n    \"historia\" : \"Multimillonario dedicado a la investigación de innovaciones tecnológicas. Se conviernte en superhéroe\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -180,7 +180,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idPersonaje\" : \"2\",\r\n    \"imagenPersonaje\" : \"https://i1.wp.com/www.sopitas.com/wp-content/uploads/2021/12/30-datos-curiosos-harry-potter.jpg\",\r\n    \"nombre\" : \"Shrek\",\r\n    \"edad\" : \"35\",\r\n    \"peso\" : \"130\",\r\n    \"historia\" : \"Un ogro verde\",\r\n    \"idPeliOSerie\" : {\r\n    \"idPeliOSerie\" : \"1\",\r\n    \"imagen\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrR2wjVfAucVBIaE048zDXv2G3cHCmxetx27P8HHsI7wr3yoJ\",\r\n    \"titulo\" : \"Shrek\",\r\n    \"calificacion\" : \"5\",\r\n    \"fechaCreacion\" : \"2019-03-19\",\r\n    \"idGenero\" :  {\r\n        \"idGenero\": \"2\",\r\n        \"nombre\": \"Acción\",\r\n        \"imagenGenero\" :\"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_876x493/public/media/image/2018/01/20-mejores-peliculas-cine-fantastico-todos-tiempos.jpg?h=f3a49bee&itok=RzHPtpgk\" \r\n        }\r\n}\r\n}",
+					"raw": "{\r\n    \"idPersonaje\" : \"2\",\r\n    \"imagenPersonaje\" : \"https://i1.wp.com/www.sopitas.com/wp-content/uploads/2021/12/30-datos-curiosos-harry-potter.jpg\",\r\n    \"nombre\" : \"Shrek\",\r\n    \"edad\" : \"35\",\r\n    \"peso\" : \"130\",\r\n    \"historia\" : \"Un ogro verde\"\r\n    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -202,7 +202,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/characters?age",
+			"name": "6 - busqueda de personaje por edad - localhost:8080/characters?age",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -226,7 +226,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/characters?name",
+			"name": "6 - busqueda de personaje por nombre - localhost:8080/characters?name",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -250,7 +250,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/characters?movies=5",
+			"name": "6 - busqueda de personaje por id de pelicula - localhost:8080/characters?movies=5",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -274,7 +274,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/characters/ (detalle de todos)",
+			"name": "3 - Listado de personajes - localhost:8080/characters/",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -287,6 +287,24 @@
 					"path": [
 						"characters",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7 - Listado de peliculas (imagen, titulo y fecha creacion)- localhost:8080/movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
 					]
 				}
 			},
